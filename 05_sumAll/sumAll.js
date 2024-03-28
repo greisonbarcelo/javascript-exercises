@@ -5,7 +5,7 @@ const sumAll = function(num1, num2) {
     let biggerValue = Math.max(num1, num2);
     let smallerValue = Math.min(num1, num2);
     //console.log(biggerValue);
-    if(typeof num1 === 'string' || typeof num2 === 'string' || Array.isArray(num1, num2)){
+    if(!Number.isInteger(num1, num2) || !Number.isInteger(num2) || Array.isArray(num1, num2)){
         return error;
     } else if(biggerValue >= 0 && smallerValue >= 0){
         for(let i = smallerValue; i <= biggerValue; i++){
