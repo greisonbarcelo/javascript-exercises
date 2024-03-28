@@ -1,18 +1,9 @@
 const convertToCelsius = function(fahrenheit) {
-  let formulaOne = (fahrenheit - 32) * 5/9;
-
-  if(formulaOne === 0){
-    return formulaOne;
-  }
-  return parseFloat(formulaOne.toFixed(1));
+  return Math.round((fahrenheit - 32) * (5 / 9) * 10) / 10;
 };
 
 const convertToFahrenheit = function(celsius) {
-  let formulaTwo = (9/5 * celsius) + 32;
-  if(Number.isInteger(formulaTwo)){
-    return formulaTwo;
-  }
-  return parseFloat(formulaTwo.toFixed(1));
+  return Math.round(((celsius * 9) / 5 + 32) * 10) / 10;
 };
 
 // Do not edit below this line
