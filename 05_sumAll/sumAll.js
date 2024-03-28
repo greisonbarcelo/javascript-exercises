@@ -1,28 +1,20 @@
-const sumAll = function(numOne, numTwo) {
-    let sum = 0;
+const sumAll = function(num1, num2) {
+    let finalSum = 0;
+    let error = "ERROR";
     
-    if(numOne < 0 || typeof numOne === 'string' || typeof numTwo === 'string' || Array.isArray(numOne) || Array.isArray(numTwo)){
-        return "ERROR";
-    } else if(numOne < numTwo){
-        for(let i = numOne; i <= numTwo; i++){
-            //console.log(i);
-            sum += i;
+    let biggerValue = Math.max(num1, num2);
+    let smallerValue = Math.min(num1, num2);
+    //console.log(biggerValue);
+    if(typeof num1 === 'string' || typeof num2 === 'string' || Array.isArray(num1, num2)){
+        return error;
+    } else if(biggerValue >= 0 && smallerValue >= 0){
+        for(let i = smallerValue; i <= biggerValue; i++){
+            finalSum += i;
         }
-            return sum;
-            //console.log(sum);
-    } else if(numTwo < numOne){
-        for(let i = numTwo; i <= numOne; i++){
-            //console.log(i);
-            sum += i;
-        }
-        return sum;
-        //console.log(sum);
-    } else return "ERROR";
-} 
-
-
-
+    } else return error;
+    return finalSum;
+}
     
-//sumAll(123, 1);
+//sumAll(1, 4);
 // Do not edit below this line
 module.exports = sumAll;
