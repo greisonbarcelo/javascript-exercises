@@ -1,9 +1,8 @@
 const palindromes = function (word) {
     let rev = '';
-    let newWord = word.toLowerCase();
-    let punctuation = /[\.,?! ]/g;
-    let finalWord = newWord.replace(punctuation, "");
+    let finalWord = word.toLowerCase().replace(/[\.,?! ]/g, "");
     // console.log(finalWord);
+    
     for(let i = finalWord.length-1; i >= 0; i--){
         rev += finalWord[i];
     } 
