@@ -1,21 +1,12 @@
-const books = [
-    {
-      title: 'Book',
-      author: 'Name'
-    },
-    {
-      title: 'Book2',
-      author: 'Name2'
-    }
-  ]
+const getTheTitles = function(books) {
+    // let newArr = [];
+    // for(let i = 0; i < books.length; i++){
+    //     newArr[i] = books[i].title;
+    //     //console.log(books[i].title);
+    // } return newArr;
+    // //console.log(newArr);
 
-const getTheTitles = function() {
-    let newArr = [];
-    for(let i = 0; i < books.length; i++){
-        newArr[i] = books[i].title;
-        //console.log(books[i].title);
-    } return newArr;
-    //console.log(newArr);
+    return books.map(book => book.title)
 };
 //getTheTitles();
 // Do not edit below this line
